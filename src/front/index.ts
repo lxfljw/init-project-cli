@@ -1,6 +1,6 @@
 import * as inquirer from "inquirer";
 const prompt = inquirer.createPromptModule();
-import clone from "download-git-repo";
+import { cloneRepo } from "../utils";
 import * as path from "path";
 import templateRepo from "../config/template-repo";
 
@@ -20,17 +20,11 @@ export default function frontPrompt(name: string) {
 
     switch (framework) {
       case "React":
-        clone(
-          templateRepo.react17,
-          path.resolve(process.cwd(), name),
-          (err) => {
-            console.error(err);
-          }
-        );
+        cloneRepo(templateRepo.react17, path.resolve(process.cwd(), name));
         break;
       case "Vue":
-        throw new Error("暂无模板, 请重新选择");
-      // break;
+        console.error("暂无模板, 请重新选择");
+        break;
     }
   });
 }

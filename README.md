@@ -3,7 +3,7 @@
 ### 安装
 
 ```shell
-npm i lxf-init-project-cli
+npm i lxf-init-project-cli -g
 ```
 
 ### 使用

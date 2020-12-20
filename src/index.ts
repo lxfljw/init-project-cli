@@ -24,7 +24,7 @@ program
     ]).then(({ frameworkType }) => {
       console.log("你的选择是:", frameworkType);
       if (frameworkType === "前端") {
-        frontPrompt();
+        frontPrompt(name);
       } else if (frameworkType === "后端(koa2)") {
         serverPrompt(name);
       }

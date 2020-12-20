@@ -1,0 +1,29 @@
+{
+  "name": "init-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "init-project": "index.js"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^7.3.1",
+    "@types/shelljs": "^0.8.8"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "tsc -w",
+    "prepub": "tsc && npm link"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^6.2.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.3.3",
+    "ora": "^5.1.0",
+    "shelljs": "^0.8.4"
+  }
+}

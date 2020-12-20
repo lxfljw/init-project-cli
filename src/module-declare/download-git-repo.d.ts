@@ -2,7 +2,7 @@ declare module "download-git-repo" {
   export default function download(
     url: string,
     dir: string,
-    cb: (err) => void
+    cb: (err: Error) => void
   ): void;
 }
 
